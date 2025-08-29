@@ -1,0 +1,81 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  samples Sample[]
+  assays  Assay[]
+
+  @@map("users")
+}
+
+model Sample {
+  id        String   @id @default(cuid())
+  code      String   @unique
+  matrix    String   // e.g., "Ground Beef", "Chicken Breast"
+  testType  String   // "BACTERIA" or "YEAST_MOLD"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId String
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  assays Assay[]
+
+  @@map("samples")
+}
+
+model Assay {
+  id              String   @id @default(cuid())
+  dilution        String   // "AS_IS", "ONE_TO_TEN", etc.
+  dilutionCoeff   Float
+  touAt           String   // JSON string: {"0": 150, "10": 180, "20": 230, "end": 260}
+  endAtHours      Float
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  sampleId String
+  sample   Sample @relation(fields: [sampleId], references: [id], onDelete: Cascade)
+
+  userId String
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  result Result?
+
+  @@map("assays")
+}
+
+model Result {
+  id          String   @id @default(cuid())
+  cfuVial     Int
+  cfuPerG     Float
+  logReported Float?
+  logIse      Float
+  logDiff     Float?
+  qcNote      String
+  createdAt   DateTime @default(now())
+
+  assayId String @unique
+  assay   Assay @relation(fields: [assayId], references: [id], onDelete: Cascade)
+
+  @@map("results")
+}
+
+// Note: SQLite doesn't support enums, so we use strings
+// TestType: "BACTERIA" or "YEAST_MOLD"
+// DilutionType: "AS_IS", "ONE_TO_TEN", "ONE_TO_HUNDRED", etc.

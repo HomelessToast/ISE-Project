@@ -1,0 +1,96 @@
+{
+  "sheets": [
+    "Sheet1"
+  ],
+  "named_ranges": {
+    "DilutionCoeff_B18": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$B$18"
+      }
+    ],
+    "DilutionDenom_C18": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$C$18"
+      }
+    ],
+    "Exponent_P10": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$P$10"
+      }
+    ],
+    "FillWeight_g_J11": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$J$11"
+      }
+    ],
+    "Offset_P10": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$S$11"
+      }
+    ],
+    "Output": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$J$15"
+      }
+    ],
+    "Output_Adjusted_CFU_per_g": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$L$15"
+      }
+    ],
+    "Output_CFU_per_mL": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$J$15"
+      }
+    ],
+    "Output_Sample_CFU_per_g": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$K$15"
+      }
+    ],
+    "RequiredSpecCoeff_C35": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$C$35"
+      }
+    ],
+    "TOU_Active_1": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$D$18"
+      }
+    ],
+    "TOU_Active_2": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$D$19"
+      }
+    ],
+    "TOU_Active_3": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$D$20"
+      }
+    ],
+    "TOU_Active_4": [
+      {
+        "sheet": "Sheet1",
+        "coord": "$D$21"
+      }
+    ]
+  },
+  "formula_count": 126,
+  "value_count": 134,
+  "node_count": 278,
+  "topo_count": 278,
+  "cycle_nodes": []
+}

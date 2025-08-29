@@ -1,0 +1,2839 @@
+{
+  "Sheet1!A1": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A1"
+  },
+  "Sheet1!A2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A2"
+  },
+  "Sheet1!B2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B2"
+  },
+  "Sheet1!C2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C2"
+  },
+  "Sheet1!D2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D2"
+  },
+  "Sheet1!E2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E2"
+  },
+  "Sheet1!G2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "G2"
+  },
+  "Sheet1!H2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "H2"
+  },
+  "Sheet1!I2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I2"
+  },
+  "Sheet1!J2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J2"
+  },
+  "Sheet1!K2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "K2"
+  },
+  "Sheet1!L2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "L2"
+  },
+  "Sheet1!M2": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "M2"
+  },
+  "Sheet1!B3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B3"
+  },
+  "Sheet1!E3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E3"
+  },
+  "Sheet1!G3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "G3"
+  },
+  "Sheet1!H3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "H3"
+  },
+  "Sheet1!I3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I3"
+  },
+  "Sheet1!J3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J3"
+  },
+  "Sheet1!K3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "K3"
+  },
+  "Sheet1!L3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "L3"
+  },
+  "Sheet1!M3": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "M3"
+  },
+  "Sheet1!E4": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E4"
+  },
+  "Sheet1!G4": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "G4"
+  },
+  "Sheet1!K4": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "K4"
+  },
+  "Sheet1!L4": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "L4"
+  },
+  "Sheet1!M4": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "M4"
+  },
+  "Sheet1!E5": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E5"
+  },
+  "Sheet1!G5": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "G5"
+  },
+  "Sheet1!B6": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B6"
+  },
+  "Sheet1!D6": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D6"
+  },
+  "Sheet1!E6": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E6"
+  },
+  "Sheet1!G6": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "G6"
+  },
+  "Sheet1!B7": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B7"
+  },
+  "Sheet1!D7": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D7"
+  },
+  "Sheet1!B8": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B8"
+  },
+  "Sheet1!D8": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D8"
+  },
+  "Sheet1!L9": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "L9"
+  },
+  "Sheet1!S10": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "S10"
+  },
+  "Sheet1!A11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A11"
+  },
+  "Sheet1!B11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B11"
+  },
+  "Sheet1!C11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C11"
+  },
+  "Sheet1!D11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D11"
+  },
+  "Sheet1!E11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E11"
+  },
+  "Sheet1!F11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "F11"
+  },
+  "Sheet1!I11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I11"
+  },
+  "Sheet1!J11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J11"
+  },
+  "Sheet1!S11": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "S11"
+  },
+  "Sheet1!A12": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A12"
+  },
+  "Sheet1!N12": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "N12"
+  },
+  "Sheet1!A13": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A13"
+  },
+  "Sheet1!N13": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "N13"
+  },
+  "Sheet1!O13": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O13"
+  },
+  "Sheet1!P13": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "P13"
+  },
+  "Sheet1!A14": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A14"
+  },
+  "Sheet1!I14": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I14"
+  },
+  "Sheet1!J14": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J14"
+  },
+  "Sheet1!K14": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "K14"
+  },
+  "Sheet1!L14": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "L14"
+  },
+  "Sheet1!N14": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "N14"
+  },
+  "Sheet1!O14": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O14"
+  },
+  "Sheet1!A15": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A15"
+  },
+  "Sheet1!N16": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "N16"
+  },
+  "Sheet1!O16": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O16"
+  },
+  "Sheet1!P16": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "P16"
+  },
+  "Sheet1!A17": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A17"
+  },
+  "Sheet1!B17": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B17"
+  },
+  "Sheet1!C17": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C17"
+  },
+  "Sheet1!D17": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D17"
+  },
+  "Sheet1!E17": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E17"
+  },
+  "Sheet1!F17": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "F17"
+  },
+  "Sheet1!A18": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A18"
+  },
+  "Sheet1!B18": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B18"
+  },
+  "Sheet1!C18": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C18"
+  },
+  "Sheet1!D18": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D18"
+  },
+  "Sheet1!A19": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A19"
+  },
+  "Sheet1!D19": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D19"
+  },
+  "Sheet1!A20": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A20"
+  },
+  "Sheet1!D20": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D20"
+  },
+  "Sheet1!A21": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A21"
+  },
+  "Sheet1!D21": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D21"
+  },
+  "Sheet1!I21": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I21"
+  },
+  "Sheet1!N21": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "N21"
+  },
+  "Sheet1!O21": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O21"
+  },
+  "Sheet1!P21": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "P21"
+  },
+  "Sheet1!I22": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I22"
+  },
+  "Sheet1!J22": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J22"
+  },
+  "Sheet1!K22": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "K22"
+  },
+  "Sheet1!L22": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "L22"
+  },
+  "Sheet1!A23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A23"
+  },
+  "Sheet1!B23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B23"
+  },
+  "Sheet1!C23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C23"
+  },
+  "Sheet1!D23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D23"
+  },
+  "Sheet1!E23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E23"
+  },
+  "Sheet1!F23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "F23"
+  },
+  "Sheet1!J23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J23"
+  },
+  "Sheet1!K23": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "K23"
+  },
+  "Sheet1!A24": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A24"
+  },
+  "Sheet1!J24": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J24"
+  },
+  "Sheet1!A25": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A25"
+  },
+  "Sheet1!J25": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J25"
+  },
+  "Sheet1!A26": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A26"
+  },
+  "Sheet1!J26": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "J26"
+  },
+  "Sheet1!A27": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A27"
+  },
+  "Sheet1!N27": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "N27"
+  },
+  "Sheet1!O27": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O27"
+  },
+  "Sheet1!I28": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I28"
+  },
+  "Sheet1!O28": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O28"
+  },
+  "Sheet1!A29": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A29"
+  },
+  "Sheet1!B29": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B29"
+  },
+  "Sheet1!C29": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C29"
+  },
+  "Sheet1!D29": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D29"
+  },
+  "Sheet1!E29": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "E29"
+  },
+  "Sheet1!F29": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "F29"
+  },
+  "Sheet1!O29": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O29"
+  },
+  "Sheet1!A30": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A30"
+  },
+  "Sheet1!I30": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "I30"
+  },
+  "Sheet1!O30": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O30"
+  },
+  "Sheet1!A31": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A31"
+  },
+  "Sheet1!O31": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O31"
+  },
+  "Sheet1!A32": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A32"
+  },
+  "Sheet1!O32": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O32"
+  },
+  "Sheet1!A33": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A33"
+  },
+  "Sheet1!O33": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "O33"
+  },
+  "Sheet1!A35": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A35"
+  },
+  "Sheet1!C35": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C35"
+  },
+  "Sheet1!A37": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A37"
+  },
+  "Sheet1!B37": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "B37"
+  },
+  "Sheet1!C37": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "C37"
+  },
+  "Sheet1!A38": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A38"
+  },
+  "Sheet1!A39": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A39"
+  },
+  "Sheet1!D39": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "D39"
+  },
+  "Sheet1!A40": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A40"
+  },
+  "Sheet1!A41": {
+    "type": "input",
+    "sheet": "Sheet1",
+    "addr": "A41"
+  },
+  "Sheet1!N2": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N2",
+    "formula": "=(D19-D18)/10",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D19",
+        "D18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!A3": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "A3",
+    "formula": "=0.5*A4",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C3": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C3",
+    "formula": "=0.5*C4",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D3": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D3",
+    "formula": "=0.5*D4",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N3": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N3",
+    "formula": "=(D20-D19)/10",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D20",
+        "D19"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!A4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "A4",
+    "formula": "=0.5*A5",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A5"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B4",
+    "formula": "=0.5*B5",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B5"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C4",
+    "formula": "=0.5*C5",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C5"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D4",
+    "formula": "=0.5*D5",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D5"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!H4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "H4",
+    "formula": "=SLOPE(B3:B9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B3",
+        "B9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I4",
+    "formula": "=SLOPE(A3:A9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A3",
+        "A9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!J4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "J4",
+    "formula": "=SLOPE(C3:C9,D3:D9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C3",
+        "C9",
+        "D3",
+        "D9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N4": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N4",
+    "formula": "=(D21-D20)/4.1",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D21",
+        "D20"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!A5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "A5",
+    "formula": "=0.5*A6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B5",
+    "formula": "=0.5*B6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C5",
+    "formula": "=0.5*C6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D5",
+    "formula": "=0.5*D6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!H5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "H5",
+    "formula": "=INTERCEPT(B3:B9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B3",
+        "B9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I5",
+    "formula": "=INTERCEPT(A3:A9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A3",
+        "A9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!J5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "J5",
+    "formula": "=INTERCEPT(C3:C9,D3:D9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C3",
+        "C9",
+        "D3",
+        "D9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!K5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "K5",
+    "formula": "=INTERCEPT(A3:A9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A3",
+        "A9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L5": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L5",
+    "formula": "=INTERCEPT(A3:A9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A3",
+        "A9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!A6": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "A6",
+    "formula": "=I3",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I3"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C6": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C6",
+    "formula": "=H3",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "H3"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!H6": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "H6",
+    "formula": "=RSQ(B3:B9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B3",
+        "B9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I6": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I6",
+    "formula": "=RSQ(A3:A9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A3",
+        "A9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!J6": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "J6",
+    "formula": "=RSQ(C3:C9,D3:D9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C3",
+        "C9",
+        "D3",
+        "D9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!K6": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "K6",
+    "formula": "=RSQ(A3:A9,C3:C9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A3",
+        "A9",
+        "C3",
+        "C9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L6": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L6",
+    "formula": "=RSQ(B3:B9,D3:D9)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B3",
+        "B9",
+        "D3",
+        "D9"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!A7": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "A7",
+    "formula": "=I3",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I3"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C7": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C7",
+    "formula": "=H3",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "H3"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!A8": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "A8",
+    "formula": "=I3",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I3"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C8": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C8",
+    "formula": "=H3",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "H3"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!A9": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "A9",
+    "formula": "=2*A6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "A6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B9": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B9",
+    "formula": "=2*B6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C9": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C9",
+    "formula": "=2*C6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D9": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D9",
+    "formula": "=2*D6",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D6"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L10": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L10",
+    "formula": "=I15",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I15"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!M10": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "M10",
+    "formula": "=(LOG(L10))",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "L10"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N10": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N10",
+    "formula": "=J30",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "J30"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!O10": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "O10",
+    "formula": "=LOG(N10)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "N10"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!P10": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "P10",
+    "formula": "=ROUND(ABS(M10-O10),0)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "M10",
+        "O10"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B12": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B12",
+    "formula": "=B18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C12": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C12",
+    "formula": "=C18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D12": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D12",
+    "formula": "=B38/0.1",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B38"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E12": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E12",
+    "formula": "=(((D12-H5)/H4)*(C12*B12))/14.65",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D12",
+        "H5",
+        "H4",
+        "C12",
+        "B12"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!F12": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "F12",
+    "formula": "=E12-E12",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E12",
+        "E12"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D13": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D13",
+    "formula": "=B39/0.1",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B39"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E13": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E13",
+    "formula": "=(((D13-H5)/H4)*(C12*B12))/14.65",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D13",
+        "H5",
+        "H4",
+        "C12",
+        "B12"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!F13": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "F13",
+    "formula": "=E13-E12",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E13",
+        "E12"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D14": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D14",
+    "formula": "=B40/0.1",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B40"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E14": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E14",
+    "formula": "=(((D14-H5)/H4)*(C12*B12))/14.65",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D14",
+        "H5",
+        "H4",
+        "C12",
+        "B12"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!F14": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "F14",
+    "formula": "=E14-E13",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E14",
+        "E13"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!P14": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "P14",
+    "formula": "=AVERAGE(N17,O17,P17)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "N17",
+        "O17",
+        "P17"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D15": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D15",
+    "formula": "=B41/0.1",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B41"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E15": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E15",
+    "formula": "=(((D15-H5)/H4)*(C12*B12))/14.65",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D15",
+        "H5",
+        "H4",
+        "C12",
+        "B12"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!F15": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "F15",
+    "formula": "=E15-E14",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E15",
+        "E14"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I15": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I15",
+    "formula": "=AVERAGE(F18,F24,F30)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "F18",
+        "F24",
+        "F30"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!J15": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "J15",
+    "formula": "=(I15*C18)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I15",
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!K15": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "K15",
+    "formula": "=(J15/POWER(10,P10))*J11",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "J15",
+        "P10",
+        "J11"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L15": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L15",
+    "formula": "=IF(I15>=ROUND(LOG(J30),0),K15/10,K15)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I15",
+        "J30",
+        "K15",
+        "K15"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N17": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N17",
+    "formula": "=(($N$14-$D$18)/$O$14)*(1/I4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$N$14",
+        "$D$18",
+        "$O$14",
+        "I4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!O17": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "O17",
+    "formula": "=(($N$14-$D$18)/$O$14)*(1/L4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$N$14",
+        "$D$18",
+        "$O$14",
+        "L4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!P17": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "P17",
+    "formula": "=(($N$14-$D$18)/$O$14)*(1/K4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$N$14",
+        "$D$18",
+        "$O$14",
+        "K4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E18": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E18",
+    "formula": "=(((D18-I5)/I4)*(C35/C18))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D18",
+        "I5",
+        "I4",
+        "C35",
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!F18": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "F18",
+    "formula": "=AVERAGE(E19:E21)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E19",
+        "E21"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E19": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E19",
+    "formula": "=(((D19-N2)/I4)*(C35/C18))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D19",
+        "N2",
+        "I4",
+        "C35",
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E20": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E20",
+    "formula": "=(((D20-N3)/I4)*(C35/C18))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D20",
+        "N3",
+        "I4",
+        "C35",
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E21": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E21",
+    "formula": "=(((D21-N4)/I4)*(C35/C18))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D21",
+        "N4",
+        "I4",
+        "C35",
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N22": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N22",
+    "formula": "=((I23-$D$18)/J23)*(1/$I$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I23",
+        "$D$18",
+        "J23",
+        "$I$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!O22": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "O22",
+    "formula": "=((I23-$D$18)/J23)*(1/$L$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I23",
+        "$D$18",
+        "J23",
+        "$L$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!P22": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "P22",
+    "formula": "=((I23-$D$18)/J23)*(1/$K$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I23",
+        "$D$18",
+        "J23",
+        "$K$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I23": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I23",
+    "formula": "=D18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L23": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L23",
+    "formula": "=(LOG(E12)-LOG(K23))",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E12",
+        "K23"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N23": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N23",
+    "formula": "=((I24-$D$18)/J24)*(1/$I$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I24",
+        "$D$18",
+        "J24",
+        "$I$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!O23": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "O23",
+    "formula": "=((I24-$D$18)/J24)*(1/$L$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I24",
+        "$D$18",
+        "J24",
+        "$L$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!P23": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "P23",
+    "formula": "=((I24-$D$18)/J24)*(1/$K$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I24",
+        "$D$18",
+        "J24",
+        "$K$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B24",
+    "formula": "=B18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C24",
+    "formula": "=C18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D24",
+    "formula": "=D18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E24",
+    "formula": "=(((D24-L5)/L4)*(C35/C24))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D24",
+        "L5",
+        "L4",
+        "C35",
+        "C24"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!F24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "F24",
+    "formula": "=AVERAGE(E25:E27)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E25",
+        "E27"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I24",
+    "formula": "=D19",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D19"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!K24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "K24",
+    "formula": "=AVERAGE(N23,O23,P23)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "N23",
+        "O23",
+        "P23"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L24",
+    "formula": "=(LOG(E13)-LOG(K24))",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E13",
+        "K24"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N24",
+    "formula": "=((I25-$D$18)/J25)*(1/$I$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I25",
+        "$D$18",
+        "J25",
+        "$I$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!O24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "O24",
+    "formula": "=((I25-$D$18)/J25)*(1/$L$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I25",
+        "$D$18",
+        "J25",
+        "$L$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!P24": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "P24",
+    "formula": "=((I25-$D$18)/J25)*(1/$K$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I25",
+        "$D$18",
+        "J25",
+        "$K$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D25",
+    "formula": "=D19",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D19"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E25",
+    "formula": "=(((D25-N2)/L4)*(C35/C24))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D25",
+        "N2",
+        "L4",
+        "C35",
+        "C24"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I25",
+    "formula": "=D20",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D20"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!K25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "K25",
+    "formula": "=AVERAGE(N24,O24,P24)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "N24",
+        "O24",
+        "P24"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L25",
+    "formula": "=(LOG(E14)-LOG(K25))",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E14",
+        "K25"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N25",
+    "formula": "=((I26-$D$18)/J26)*(1/$I$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I26",
+        "$D$18",
+        "J26",
+        "$I$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!O25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "O25",
+    "formula": "=((I26-$D$18)/J26)*(1/$L$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I26",
+        "$D$18",
+        "J26",
+        "$L$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!P25": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "P25",
+    "formula": "=((I26-$D$18)/J26)*(1/$K$4)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "I26",
+        "$D$18",
+        "J26",
+        "$K$4"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D26": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D26",
+    "formula": "=D20",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D20"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E26": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E26",
+    "formula": "=(((D26-N3)/L4)*(C35/C24))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D26",
+        "N3",
+        "L4",
+        "C35",
+        "C24"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!I26": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "I26",
+    "formula": "=D21",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D21"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!K26": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "K26",
+    "formula": "=AVERAGE(N25,O25,P25)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "N25",
+        "O25",
+        "P25"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!L26": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "L26",
+    "formula": "=(LOG(E15)-LOG(K26))",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E15",
+        "K26"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D27": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D27",
+    "formula": "=D21",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D21"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E27": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E27",
+    "formula": "=(((D27-N4)/L4)*(C35/C24))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D27",
+        "N4",
+        "L4",
+        "C35",
+        "C24"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!K28": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "K28",
+    "formula": "=AVERAGE(L23:L26)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "L23",
+        "L26"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N28": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N28",
+    "formula": "=$K$15/O28",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$K$15",
+        "O28"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N29": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N29",
+    "formula": "=$K$15/O29",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$K$15",
+        "O29"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B30": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B30",
+    "formula": "=B18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "B18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!C30": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "C30",
+    "formula": "=C18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "C18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D30": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D30",
+    "formula": "=D18",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E30": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E30",
+    "formula": "=(((D30-K5)/K4)*(C35/C30))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D30",
+        "K5",
+        "K4",
+        "C35",
+        "C30"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!F30": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "F30",
+    "formula": "=AVERAGE(E31:E33)",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "E31",
+        "E33"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!J30": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "J30",
+    "formula": "=(J15/POWER(10,K28))",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "J15",
+        "K28"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N30": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N30",
+    "formula": "=$K$15/O30",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$K$15",
+        "O30"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D31": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D31",
+    "formula": "=D19",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D19"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E31": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E31",
+    "formula": "=(((D31-N2)/K4)*(C35/C30))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D31",
+        "N2",
+        "K4",
+        "C35",
+        "C30"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N31": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N31",
+    "formula": "=$K$15/O31",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$K$15",
+        "O31"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D32": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D32",
+    "formula": "=D20",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D20"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E32": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E32",
+    "formula": "=(((D32-N3)/K4)*(C35/C30))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D32",
+        "N3",
+        "K4",
+        "C35",
+        "C30"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N32": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N32",
+    "formula": "=$K$15/O32",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$K$15",
+        "O32"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!D33": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "D33",
+    "formula": "=D21",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D21"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!E33": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "E33",
+    "formula": "=(((D33-N4)/K4)*(C35/C30))/7850",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D33",
+        "N4",
+        "K4",
+        "C35",
+        "C30"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!N33": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "N33",
+    "formula": "=$K$15/O33",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "$K$15",
+        "O33"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B38": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B38",
+    "formula": "=(D18*0.1)/20000",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D18"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B39": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B39",
+    "formula": "=(D19*0.1)/20000",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D19"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B40": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B40",
+    "formula": "=(D20*0.1)/20000",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D20"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!B41": {
+    "type": "formula",
+    "sheet": "Sheet1",
+    "addr": "B41",
+    "formula": "=(D21*0.1)/20000",
+    "refs": {
+      "sheet_refs": [],
+      "base_cells": [
+        "D21"
+      ],
+      "named_refs": [],
+      "uses_indirect": false,
+      "uses_offset": false
+    }
+  },
+  "Sheet1!$B$18": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$B$18"
+  },
+  "Sheet1!$C$18": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$C$18"
+  },
+  "Sheet1!$P$10": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$P$10"
+  },
+  "Sheet1!$J$11": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$J$11"
+  },
+  "Sheet1!$S$11": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$S$11"
+  },
+  "Sheet1!$J$15": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$J$15"
+  },
+  "Sheet1!$L$15": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$L$15"
+  },
+  "Sheet1!$K$15": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$K$15"
+  },
+  "Sheet1!$C$35": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$C$35"
+  },
+  "Sheet1!$D$18": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$D$18"
+  },
+  "Sheet1!$D$19": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$D$19"
+  },
+  "Sheet1!$D$20": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$D$20"
+  },
+  "Sheet1!$D$21": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$D$21"
+  },
+  "Sheet1!$N$14": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$N$14"
+  },
+  "Sheet1!$O$14": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$O$14"
+  },
+  "Sheet1!$I$4": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$I$4"
+  },
+  "Sheet1!$L$4": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$L$4"
+  },
+  "Sheet1!$K$4": {
+    "type": "unknown",
+    "sheet": "Sheet1",
+    "addr": "$K$4"
+  }
+}
