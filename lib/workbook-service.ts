@@ -352,28 +352,20 @@ OUTPUTS (the green boxes):
       // SINGLE SOURCE OF TRUTH: Normalize all user inputs to coefficients
       const { testDilutionCoeff, requiredDilutionCoeff } = this.normalizeInputs(input);
       
-      // Resolve offset from named range "Offset_P10" with robust fallback
-      const offset = this.resolveOffsetP10(workbook, worksheet);
-      const p10Exponent = Math.log10(testDilutionCoeff) - offset;
-      
       console.info("[EXCEL] Inputs:", { 
         coeff: testDilutionCoeff, 
         denom: 1/testDilutionCoeff, 
-        specCoeff: requiredDilutionCoeff, 
-        offset, 
-        p10: p10Exponent
+        specCoeff: requiredDilutionCoeff
       });
       
       console.log('=== SINGLE SOURCE OF TRUTH ===');
       console.log(`Test Dilution: ${input.dilutionDisplay || 'N/A'} → coefficient: ${testDilutionCoeff}`);
       console.log(`Required Spec: ${input.requiredDilutionSpec} → coefficient: ${requiredDilutionCoeff}`);
-      console.log(`P10 Exponent: LOG10(${testDilutionCoeff}) - ${offset} = ${p10Exponent}`);
-      console.log(`Workbook Offset: ${offset} (from Excel template)`);
       console.log('=== END SOURCE OF TRUTH ===');
       
       console.log('Writing input values...');
       // Write input values to cells using normalized coefficients
-      this.writeInputValues(worksheet, input, testDilutionCoeff, requiredDilutionCoeff, p10Exponent);
+      this.writeInputValues(worksheet, input, testDilutionCoeff, requiredDilutionCoeff);
 
       // Echo-test the writes: immediately read back the cells we just wrote
       console.log('Echo-testing writes...');
@@ -418,24 +410,11 @@ OUTPUTS (the green boxes):
       console.log('🔍 Pre-recalc values:');
       console.log(`  B18 = ${testDilutionCoeff} (test dilution coefficient)`);
       console.log(`  C18 = ${1 / testDilutionCoeff} (test dilution denominator)`);
-      console.log(`  P10 = ${p10Exponent} (calculated from user input, not hardcoded)`);
       
       // Force Excel to recalculate all formulas
       try {
         XLSX_CALC(workbook);  // Call the function directly
         console.log('xlsx-calc recalculation completed successfully');
-        
-        // Verify P10 was set correctly
-        const p10AfterCalc = worksheet['P10'];
-        if (p10AfterCalc && p10AfterCalc.t === 'n') {
-          if (Math.abs(p10AfterCalc.v - p10Exponent) > 1e-10) {
-            console.log(`⚠️ P10 verification failed: expected ${p10Exponent}, got ${p10AfterCalc.v}`);
-            console.log(`🔧 Overriding P10 back to ${p10Exponent}`);
-            worksheet['P10'] = { v: p10Exponent, t: 'n' };
-          } else {
-            console.log(`✅ P10 verification passed: ${p10Exponent}`);
-          }
-        }
         
         // Verify K15 has been recalculated
         const k15AfterCalc = worksheet['K15'];
@@ -450,13 +429,12 @@ OUTPUTS (the green boxes):
         console.log('=== PER-SAMPLE CALCULATION CHAIN ===');
         console.log(`Input: ${input.dilutionDisplay || 'N/A'} (${input.requiredDilutionSpec})`);
         console.log(`Normalized: coeffTest=${testDilutionCoeff}, coeffSpec=${requiredDilutionCoeff}`);
-        console.log(`Calculated: p10=${p10Exponent}, offset=${offset}`);
         console.log(`Excel Result: K15=${k15AfterCalc?.v || 'N/A'}`);
         console.log('=== END CALCULATION CHAIN ===');
         
         // Debug intermediate cells to find the 100x scaling issue
         console.log('=== INTERMEDIATE CELL DEBUG ===');
-        const debugCells = ['J15', 'I15', 'H15', 'G15', 'F15', 'E15', 'N10', 'O10', 'P10'];
+        const debugCells = ['J15', 'I15', 'H15', 'G15', 'F15', 'E15', 'N10', 'O10'];
         for (const cellAddr of debugCells) {
           const cell = worksheet[cellAddr];
           if (cell) {
@@ -466,47 +444,7 @@ OUTPUTS (the green boxes):
           }
         }
         console.log('=== END INTERMEDIATE DEBUG ===');
-        
-        // Quick sanity check: what should the result be?
-        const expectedResult = k15AfterCalc?.v * 100;
-        console.log(`🔍 Expected result (100x current): ${expectedResult}`);
-        console.log(`🔍 This should match Excel's output of ~65.4`);
-        
-        // PINPOINT THE NEXT LINK: Echo P10, J15, and K15 post-recalc
-        console.log('=== PINPOINT DEBUG ===');
-        const pinpointCells = ['P10', 'J15', 'K15'];
-        for (const cellAddr of pinpointCells) {
-          const cell = worksheet[cellAddr];
-          if (cell) {
-            console.log(`${cellAddr}: ${cell.v} (type: ${cell.t})`);
-          } else {
-            console.log(`${cellAddr}: NOT FOUND`);
-          }
-        }
-        
-        // Verify the scaling worked correctly
-        if (k15AfterCalc?.v && k15AfterCalc.v > 10) {
-          console.log('✅ K15 is now > 10 - scaling fix worked!');
-        } else {
-           console.log('❌ K15 is still < 10 - scaling issue persists');
-         }
-         
-         // Verify our P10 signed exponent worked and show key results
-         const ourP10 = worksheet['P10'];
-         if (ourP10 && ourP10.t === 'n') {
-           console.log(`🔍 Our P10 signed exponent: ${ourP10.v} (should be -5 for 1:1000)`);
-           if (Math.abs(ourP10.v - (-5)) < 0.01) {
-             console.log('✅ P10 is correct (-5) - signed exponent for direct use in K15');
-           } else {
-             console.log('⚠️ P10 is unexpected - got', ourP10.v);
-           }
-         } else {
-           console.log('❌ P10 not found or not numeric');
-         }
-         console.log('=== END PINPOINT DEBUG ===');
-         
-         // OPTION B SUCCESS: P10 is now the signed exponent for direct use in K15
-         console.log('🎯 OPTION B: P10 = -5 (signed exponent), K15 formula works as-is');
+
       } catch (error: unknown) {
         console.error('xlsx-calc recalculation failed:', error);
         const errorMessage = error instanceof Error ? error.message : String(error);
@@ -539,8 +477,7 @@ OUTPUTS (the green boxes):
       fillWeight_g: number;
     },
     testDilutionCoeff: number,
-    requiredDilutionCoeff: number,
-    p10Exponent: number
+    requiredDilutionCoeff: number
   ) {
     // Write TOU values using the active TOU named ranges
     this.writeCell(worksheet, NAMED_RANGES.TOU_ACTIVE_1, input.tou.h0);
@@ -552,21 +489,17 @@ OUTPUTS (the green boxes):
     this.writeCell(worksheet, NAMED_RANGES.FILL_WEIGHT_G, input.fillWeight_g);
  
     // Write test dilution: B18 = coefficient, C18 = denominator
-    this.writeCell(worksheet, NAMED_RANGES.DILUTION_COEFF, testDilutionCoeff); // B18 = coefficient (e.g., 0.0001)
-    
-    // Calculate denominator from coefficient for C18
-    const dilutionDenominator = 1 / testDilutionCoeff;
-    this.writeCell(worksheet, NAMED_RANGES.DILUTION_DENOM, dilutionDenominator); // C18 = denominator (e.g., 10,000)
-    
-    console.log(`🔍 Wrote test dilution: B18 = ${testDilutionCoeff} (coefficient), C18 = ${dilutionDenominator} (denominator)`);
+    this.writeCell(worksheet, NAMED_RANGES.DILUTION_COEFF, testDilutionCoeff); // B18 = coefficient (e.g., 0.001)
+    const denom = 1 / testDilutionCoeff;
+    this.writeCell(worksheet, NAMED_RANGES.DILUTION_DENOM, denom); // C18 = denominator (e.g., 1000)
+    console.log(`🔍 Wrote test dilution: B18 = ${testDilutionCoeff} (coefficient), C18 = ${denom} (denominator)`);
     
     // Write required dilution spec to C35 ONLY (does not affect K15 calculation)
     this.writeCell(worksheet, NAMED_RANGES.REQUIRED_SPEC_COEFF, requiredDilutionCoeff);
     console.log(`🔍 Wrote required spec coefficient ${requiredDilutionCoeff} to C35 ONLY`);
     
-    // Set P10 to the calculated exponent (no hardcoded values)
-    this.writeCell(worksheet, NAMED_RANGES.EXPONENT_P10, p10Exponent);
-    console.log(`🔍 Set P10 = ${p10Exponent} (calculated from user input, not hardcoded)`);
+    // Do NOT override P10; let workbook compute it
+    console.log('🔍 Skipping P10 write (workbook computes P10 internally)');
   }
 
   /**
@@ -696,50 +629,17 @@ OUTPUTS (the green boxes):
     const cfuPerGAdjResult = cfuPerGAdjRange.ok ? 
       this.extractCellValue(cfuPerGAdjRange.cell!, 'CFU/g Adjusted', cfuPerGAdjRange.addr!) : null;
 
-    // Calculate derived CFU/mL from the workbook identity: K15 = (J15 / 10^P10) * J11
-    // ⇒ derivedCfuPerMl = (cfuPerG.raw / J11) * 10^P10
-    // We need to get the actual fill weight and P10 from the workbook
-    const fillWeightCell = worksheet['J11'];
-    const p10Cell = worksheet['P10'];
-    const fillWeight_g = fillWeightCell && fillWeightCell.t === 'n' ? fillWeightCell.v : 1;
-    const p10Value = p10Cell && p10Cell.t === 'n' ? p10Cell.v : Math.log10(testDilutionCoeff) - 2;
-    
-    // Debug the derived calculation
-    console.log("[DEBUG] Derived CFU/mL calculation:", {
-      cfuPerGResult: cfuPerGResult.raw,
-      fillWeight_g,
-      p10Value,
-      testDilutionCoeff,
-      calculation: `(${cfuPerGResult.raw} / ${fillWeight_g}) * 10^${p10Value}`
-    });
-    
-    const derivedCfuPerMl = 
-      (cfuPerGResult.raw != null && Number.isFinite(cfuPerGResult.raw) && fillWeight_g > 0)
-        ? (cfuPerGResult.raw / fillWeight_g) * Math.pow(10, p10Value)
-        : null;
-    
-    console.log("[DEBUG] Derived CFU/mL result:", derivedCfuPerMl);
-
-    // Decide which CFU/mL to expose: prefer derived value when available, fallback to named
+    // CFU/mL: trust workbook named output directly; optionally cross-check J15
+    const j15Cell = worksheet['J15'];
+    const j15Raw = j15Cell && j15Cell.t === 'n' ? j15Cell.v : null;
     const namedRaw = cfuPerMlResult.raw;
-    const derivedRaw = derivedCfuPerMl;
-    const relDiff = (namedRaw != null && derivedRaw != null) 
-      ? Math.abs(namedRaw - derivedRaw) / Math.max(1, Math.abs(derivedRaw)) 
+    const relDiff = (namedRaw != null && j15Raw != null)
+      ? Math.abs(namedRaw - j15Raw) / Math.max(1, Math.abs(j15Raw))
       : null;
+    const chosenCfuPerMl = namedRaw != null ? namedRaw : j15Raw;
+    const chosenAddr = namedRaw != null ? `${cfuPerMLRange.sheet}!${cfuPerMLRange.addr}` : `Sheet1!J15`;
     
-    // Always prefer derived value when available, as it's more reliable
-    const useDerived = derivedRaw != null;
-    const chosenCfuPerMl = useDerived ? derivedRaw : namedRaw;
-    const chosenAddr = useDerived ? `${cfuPerGRange.sheet}!${cfuPerGRange.addr} (derived)` : `${cfuPerMLRange.sheet}!${cfuPerMLRange.addr}`;
-
-    // Log CFU/mL reconciliation
-    console.info("[EXCEL] CFU/mL reconcile:", {
-      namedRaw,
-      derivedRaw,
-      relDiff,
-      useDerived,
-      chosen: chosenCfuPerMl
-    });
+    console.info("[EXCEL] CFU/mL reconcile:", { namedRaw, j15Raw, relDiff, chosen: chosenCfuPerMl });
 
     // Format display strings with proper precision
     const formatDisplay = (raw: number | null, precision: number): string => {
@@ -750,11 +650,7 @@ OUTPUTS (the green boxes):
 
     // Log outputs per sample
     console.info("[EXCEL] Outputs:", { 
-      cfuPerMl: { 
-        addr: chosenAddr, 
-        raw: chosenCfuPerMl, 
-        display: formatDisplay(chosenCfuPerMl, 0) // 0 decimals for CFU/mL
-      },
+      cfuPerMl: { addr: chosenAddr, raw: chosenCfuPerMl, display: formatDisplay(chosenCfuPerMl, 0) },
       cfuPerG: { 
         addr: `${cfuPerGRange.sheet}!${cfuPerGRange.addr}`, 
         raw: cfuPerGResult.raw, 
@@ -831,16 +727,17 @@ OUTPUTS (the green boxes):
    */
   private echoTestWrites(worksheet: any) {
     const cellsToTest = [
-      { name: 'B18 (Dilution Coeff)', address: NAMED_RANGES.DILUTION_COEFF.fallback },
-      { name: 'C18 (Dilution Denom)', address: NAMED_RANGES.DILUTION_DENOM.fallback },
+      { name: 'C18 (Dilution Coeff)', address: NAMED_RANGES.DILUTION_DENOM.fallback },
+      { name: 'B18 (Dilution Coeff mirror)', address: NAMED_RANGES.DILUTION_COEFF.fallback },
       { name: 'D18 (TOU Active 1)', address: NAMED_RANGES.TOU_ACTIVE_1.fallback },
       { name: 'D19 (TOU Active 2)', address: NAMED_RANGES.TOU_ACTIVE_2.fallback },
       { name: 'D20 (TOU Active 3)', address: NAMED_RANGES.TOU_ACTIVE_3.fallback },
       { name: 'D21 (TOU Active 4)', address: NAMED_RANGES.TOU_ACTIVE_4.fallback },
       { name: 'C35 (Required Spec Coeff)', address: NAMED_RANGES.REQUIRED_SPEC_COEFF.fallback },
       { name: 'J11 (Fill Weight)', address: NAMED_RANGES.FILL_WEIGHT_G.fallback },
-      { name: 'P10 (Exponent)', address: NAMED_RANGES.EXPONENT_P10.fallback },
+      // P10 is computed by workbook
       { name: 'J15 (CFU/ml)', address: 'J15' },
+      { name: 'K15 (CFU/g)', address: 'K15' },
       { name: 'CFU/mL Output', address: NAMED_RANGES.OUTPUT_CFU_PER_ML.fallback },
       { name: 'CFU/g Output', address: NAMED_RANGES.OUTPUT_SAMPLE_CFU_PER_G.fallback }
     ];
