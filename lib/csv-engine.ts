@@ -229,14 +229,27 @@ export function computeFromCsv(inputs: {
     const n = Number(d);
     return Number.isFinite(n) && n > 0 ? n : undefined;
   };
+  const parseDenominator = (d?: string) => {
+    if (!d) return undefined;
+    if (d.includes(':')) {
+      const denom = Number(d.split(':')[1].replace(/,/g, ''));
+      return Number.isFinite(denom) && denom > 0 ? denom : undefined;
+    }
+    const n = Number(d);
+    if (Number.isFinite(n) && n > 0) {
+      // If user gave coefficient numeric (e.g., 0.001), invert to denom
+      return n <= 1 ? 1 / n : n;
+    }
+    return undefined;
+  };
   const coeffTest = inputs.dilutionCoeff ?? parseDisplay(inputs.dilutionDisplay) ?? 0.001;
-  const coeffSpec = parseDisplay(inputs.requiredDilutionSpec ?? '1:1000') ?? 0.001;
+  const denomSpec = parseDenominator(inputs.requiredDilutionSpec ?? '1:1000') ?? 1000;
 
   const engine = new CsvEngine();
   const ctx = engine.compute({
     'Sheet1!B18': coeffTest,             // coefficient
     'Sheet1!C18': 1 / coeffTest,         // denominator
-    'Sheet1!C35': 1 / coeffSpec,         // denominator of spec per sheet
+    'Sheet1!C35': denomSpec,             // C35 is denominator in sheet
     'Sheet1!J11': inputs.fillWeight_g,
     'Sheet1!D18': inputs.tou.h0,
     'Sheet1!D19': inputs.tou.h10,

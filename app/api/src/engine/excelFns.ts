@@ -9,7 +9,13 @@ export const ROUND = (x: number, decimals: number = 0): number => {
 };
 
 export const LOG10 = (x: number): number => Math.log10(x);
-export const LOG = (x: number) => Math.log(x);
+// Excel LOG(number, [base]) defaults to base 10 when base is omitted
+export const LOG = (x: number, base?: number): number => {
+  if (base !== undefined) {
+    return Math.log(x) / Math.log(base);
+  }
+  return Math.log10(x);
+};
 export const POW = (x: number, y: number) => Math.pow(x, y);
 export const POWER = (x: number, y: number) => Math.pow(x, y);
 

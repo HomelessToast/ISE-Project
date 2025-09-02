@@ -299,7 +299,7 @@ export default function DashboardPage() {
     setHighestStepReached(Math.max(highestStepReached, 5));
       
     } catch (error) {
-      console.error('Error during TypeScript engine calculation:', error);
+      console.error('Error during calculation:', error);
       alert(`Calculation failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
     } finally {
       setIsCalculating(false);
@@ -1465,7 +1465,7 @@ export default function DashboardPage() {
                 {isCalculating ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Calculating with TypeScript Engine...
+                    Calculating with Excel Workbook...
                   </>
                 ) : (
                   'Calculate CFU/G Results for All Samples'
