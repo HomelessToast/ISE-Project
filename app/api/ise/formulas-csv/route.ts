@@ -6,6 +6,8 @@ import { diagnoseCsv } from '@/lib/csv-engine';
 // xlsx-calc exports a function directly
 const XLSX_CALC = require('xlsx-calc');
 
+export const runtime = 'nodejs';
+
 type CsvRow = {
   sheet: string;
   cell: string;
