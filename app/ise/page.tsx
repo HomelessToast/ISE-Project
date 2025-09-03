@@ -257,7 +257,7 @@ export default function ISEPage() {
                       onChange={(e) => handleInputChange('fillWeight_g', e.target.value)}
                     />
                     <p className="text-sm text-gray-500 mt-1">
-                      Weight of the sample in grams (must be > 0)
+                      Weight of the sample in grams (must be &gt; 0)
                     </p>
                   </div>
                 </div>
