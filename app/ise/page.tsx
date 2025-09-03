@@ -29,8 +29,8 @@ export default function ISEPage() {
       h20: '150',
       h24: '180'
     },
-    requiredDilutionSpec: '1:1000',
-    fillWeight_g: '1.0'
+    requiredDilutionSpec: '1000',
+    fillWeight_g: ''
   });
 
   const [result, setResult] = useState<ComputeResponse | null>(null);
@@ -234,25 +234,23 @@ export default function ISEPage() {
                 <h3 className="text-lg font-semibold">Other Parameters</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="requiredDilutionSpec">Required Test Dilution Spec</Label>
+                    <Label htmlFor="requiredDilutionSpec">Required Test Dilution Specification</Label>
                     <Input
                       id="requiredDilutionSpec"
                       required
-                      placeholder="e.g., 1:1000"
+                      placeholder="e.g., 1000"
                       value={formData.requiredDilutionSpec}
                       onChange={(e) => handleInputChange('requiredDilutionSpec', e.target.value)}
                     />
                     <p className="text-sm text-gray-500 mt-1">
-                      The dilution specification for your test (e.g., 1:1000, 1:1,000)
+                      The dilution specification for your test (e.g., 1000, 10000)
                 </p>
               </div>
                   <div>
                     <Label htmlFor="fillWeight_g">Fill Weight (g)</Label>
                 <Input
                       id="fillWeight_g"
-                  type="number"
-                      step="0.01"
-                      min="0.01"
+                  type="text"
                       required
                       placeholder="1.00"
                       value={formData.fillWeight_g}
@@ -302,8 +300,8 @@ export default function ISEPage() {
                       dilutionDisplay: '1:1000',
                       dilutionCoeff: '',
                       tou: { h0: '100', h10: '120', h20: '150', h24: '180' },
-                      requiredDilutionSpec: '1:1000',
-                      fillWeight_g: '1.0'
+                      requiredDilutionSpec: '1000',
+                      fillWeight_g: ''
                     });
                     setResult(null);
                   }}

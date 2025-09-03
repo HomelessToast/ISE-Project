@@ -51,7 +51,7 @@ interface SampleData {
   testType: TestType;
   dilution: string;
   dilutionCoefficient: number;
-  fillWeight: number;
+  fillWeight: string;
   requiredDilutionSpec: string;
   status: 'pending' | 'running' | 'complete' | 'error';
 }
@@ -111,8 +111,8 @@ export default function DashboardPage() {
   const [templateTestType, setTemplateTestType] = useState<TestType>(TestType.TAC_TPC);
   const [templateDilution, setTemplateDilution] = useState('1');
   const [templateDilutionCoefficient, setTemplateDilutionCoefficient] = useState(1.0);
-  const [templateFillWeight, setTemplateFillWeight] = useState(1.0);
-  const [templateRequiredDilutionSpec, setTemplateRequiredDilutionSpec] = useState('1:1000');
+  const [templateFillWeight, setTemplateFillWeight] = useState('');
+  const [templateRequiredDilutionSpec, setTemplateRequiredDilutionSpec] = useState('1000');
   const [touData, setTouData] = useState<TOUData>({
     hour0: 0,
     hour10: 0,
@@ -154,7 +154,7 @@ export default function DashboardPage() {
         testType: templateTestType,
         dilution: templateDilution,
         dilutionCoefficient: templateDilutionCoefficient,
-        fillWeight: templateFillWeight,
+        fillWeight: parseFloat(templateFillWeight) || 1.0,
         requiredDilutionSpec: templateRequiredDilutionSpec,
         status: 'pending',
       });
@@ -180,8 +180,8 @@ export default function DashboardPage() {
       testType: TestType.TAC_TPC,
       dilution: '1',
       dilutionCoefficient: 1.0,
-      fillWeight: 1.0,
-      requiredDilutionSpec: '1:1000',
+      fillWeight: '1.0',
+      requiredDilutionSpec: '1000',
       status: 'pending',
     };
 
@@ -249,7 +249,7 @@ export default function DashboardPage() {
             h24: sampleTOU.hour24,
           },
           requiredDilutionSpec: matchedSample.requiredDilutionSpec,
-          fillWeight_g: matchedSample.fillWeight,
+          fillWeight_g: parseFloat(matchedSample.fillWeight) || 1.0,
         };
       }).filter(Boolean); // Remove null entries
       
@@ -330,10 +330,7 @@ export default function DashboardPage() {
         doc.setTextColor(59, 130, 246); // Blue-600
         doc.text('BioCount.ai ISE Results Report', 105, 20, { align: 'center' });
         
-        // Subtitle
-        doc.setFontSize(12);
-        doc.setTextColor(107, 114, 128); // Gray-500
-        doc.text('CO₂-based Rapid Microbiological Enumeration using the ISE Method', 105, 30, { align: 'center' });
+
         
         // Date and time
         doc.setFontSize(10);
@@ -371,12 +368,12 @@ export default function DashboardPage() {
           data.sampleTOU.hour10,
           data.sampleTOU.hour20,
           data.sampleTOU.hour24,
-          data.result?.cfuPerMl || 0,
+          (data.result?.cfuPerMl || 0).toFixed(2),
           data.result?.formatted || data.result?.cfuPerG || 'N/A'
         ]);
         
         autoTable(doc, {
-          head: [['Sample', 'Test Type', 'Dilution', 'Fill Weight', 'Required Spec', 'TOU 0h', 'TOU 10h', 'TOU 20h', 'TOU 24h', 'CFU/ml', 'CFU/g Result']],
+          head: [['Sample', 'Test Type', 'Dilution', 'Fill Weight', 'Required Spec', 'TOU 0h', 'TOU 10h', 'TOU 20h', 'TOU 24h', 'Avg Assay CFU/ml', 'CFU/g Result']],
           body: tableData,
           startY: 85,
           styles: {
@@ -401,7 +398,7 @@ export default function DashboardPage() {
             6: { cellWidth: 14 }, // TOU 10h
             7: { cellWidth: 14 }, // TOU 20h
             8: { cellWidth: 14 }, // TOU 24h
-            9: { cellWidth: 16 }, // CFU/ml
+            9: { cellWidth: 20 }, // Avg Assay CFU/ml
             10: { cellWidth: 18 }  // CFU/g result
           }
         });
@@ -429,7 +426,7 @@ export default function DashboardPage() {
       'TOU 10h', 
       'TOU 20h',
       'TOU 24h',
-      'CFU/ml',
+      'Avg Assay CFU/ml',
       'CFU/g Result',
       'Analysis Date'
     ];
@@ -444,7 +441,7 @@ export default function DashboardPage() {
       data.sampleTOU.hour10,
       data.sampleTOU.hour20,
       data.sampleTOU.hour24,
-      data.result?.cfuPerMl || 0,
+      (data.result?.cfuPerMl || 0).toFixed(2),
       data.result?.formatted || data.result?.cfuPerG || 'N/A',
       new Date().toLocaleDateString('en-US', { 
         year: 'numeric', 
@@ -575,8 +572,8 @@ export default function DashboardPage() {
     setTemplateTestType(TestType.TAC_TPC);
     setTemplateDilution('1');
     setTemplateDilutionCoefficient(1.0);
-    setTemplateFillWeight(1.0);
-    setTemplateRequiredDilutionSpec('1:1000');
+    setTemplateFillWeight('');
+    setTemplateRequiredDilutionSpec('1000');
     setTouData({
       hour0: 0,
       hour10: 0,
@@ -632,8 +629,8 @@ export default function DashboardPage() {
     testType: TestType.TAC_TPC,
     dilution: '1',
     dilutionCoefficient: 1.0,
-    fillWeight: 1.0,
-    requiredDilutionSpec: '1:1000',
+    fillWeight: '1.0',
+    requiredDilutionSpec: '1000',
     status: 'pending',
   };
 
@@ -810,12 +807,10 @@ export default function DashboardPage() {
                   <Label htmlFor="fillWeight">Fill Weight (g)</Label>
                   <Input
                     id="fillWeight"
-                    type="number"
-                    step="0.01"
-                    min="0.01"
+                    type="text"
                     placeholder="1.00"
                     value={templateFillWeight}
-                    onChange={(e) => setTemplateFillWeight(parseFloat(e.target.value) || 1.0)}
+                    onChange={(e) => setTemplateFillWeight(e.target.value)}
                     required
                   />
                   <div className="text-xs text-gray-500">
@@ -824,16 +819,16 @@ export default function DashboardPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="requiredDilutionSpec">Required Test Dilution Spec</Label>
+                  <Label htmlFor="requiredDilutionSpec">Required Test Dilution Specification</Label>
                   <Input
                     id="requiredDilutionSpec"
-                    placeholder="e.g., 1:1000"
+                    placeholder="e.g., 1000"
                     value={templateRequiredDilutionSpec}
                     onChange={(e) => setTemplateRequiredDilutionSpec(e.target.value)}
                     required
                   />
                   <div className="text-xs text-gray-500">
-                    The dilution specification for your test (e.g., 1:1000, 1:1,000)
+                    The dilution specification for your test (e.g., 1000, 10000)
                   </div>
                 </div>
               </div>
@@ -971,11 +966,9 @@ export default function DashboardPage() {
                         <div className="space-y-1">
                           <Label className="text-xs text-gray-600">Fill Weight (g)</Label>
                           <Input
-                            type="number"
-                            step="0.01"
-                            min="0.01"
+                            type="text"
                             value={sample.fillWeight}
-                            onChange={(e) => updateSampleField('fillWeight', parseFloat(e.target.value) || 1.0, index)}
+                            onChange={(e) => updateSampleField('fillWeight', e.target.value, index)}
                             placeholder="1.00"
                             className="text-xs h-7 border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                             onClick={(e) => {
@@ -989,13 +982,13 @@ export default function DashboardPage() {
                           />
                         </div>
                         
-                        {/* Required Test Dilution Spec Input */}
+                        {/* Required Test Dilution Specification Input */}
                         <div className="space-y-1">
-                          <Label className="text-xs text-gray-600">Required Dilution Spec</Label>
+                          <Label className="text-xs text-gray-600">Required Dilution Specification</Label>
                           <Input
                             value={sample.requiredDilutionSpec}
                             onChange={(e) => updateSampleField('requiredDilutionSpec', e.target.value, index)}
-                            placeholder="e.g., 1:1000"
+                            placeholder="e.g., 1000"
                             className="text-xs h-7 border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                             onClick={(e) => {
                               e.stopPropagation();
@@ -1061,7 +1054,7 @@ export default function DashboardPage() {
                     <div className="font-medium text-blue-900">{getCurrentSample().fillWeight} g</div>
                   </div>
                   <div>
-                    <span className="text-blue-700">Required Dilution Spec:</span>
+                    <span className="text-blue-700">Required Dilution Specification:</span>
                     <div className="font-medium text-blue-900">{getCurrentSample().requiredDilutionSpec}</div>
                   </div>
                   <div>
@@ -1148,6 +1141,58 @@ export default function DashboardPage() {
                     className="border-blue-600 text-blue-600 hover:bg-blue-50"
                   >
                     Browse Files
+                  </Button>
+                  </div>
+              </div>
+
+              {/* Manual Add Samples Button */}
+              <div className="border-2 border-dashed border-green-300 rounded-lg p-8 text-center hover:border-green-400 transition-colors">
+                <div className="space-y-4">
+                  <svg className="mx-auto h-12 w-12 text-green-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                    <path d="M12 6v6m0 0v6m0-6h6m-6 0H6m12 0h6m-6 0v6m0-6V6m0 6h6m-6 0H6m12 0h6m-6 0v6m0-6V6" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <div className="text-gray-600">
+                    <p className="text-lg font-medium">Or use samples from steps 1 & 2</p>
+                    <p className="text-sm">Add your created samples to enter TOU values</p>
+                  </div>
+                  <Button 
+                    onClick={() => {
+                      // Convert samples from steps 1 & 2 to CSV format
+                      const sampleRows: CSVRow[] = samples.map((sample, index) => ({
+                        Date: new Date().toLocaleDateString(),
+                        Product: 'Manual Entry',
+                        Test: sample.testType,
+                        Sample: sample.name,
+                        DT: 'Manual',
+                        'Predicted CFU': 'TBD',
+                        Specification: sample.requiredDilutionSpec,
+                        Location: 'Manual',
+                        User: 'User',
+                        'Production Lot': `Lot ${index + 1}`,
+                        VialLot: 'Manual',
+                        Supplement: 'Manual',
+                        Description: `Sample ${index + 1}`,
+                        Reported: 'Manual',
+                        Validation: 'Manual'
+                      }));
+                      
+                      setCsvData(sampleRows);
+                      
+                      // Initialize TOU data for each sample
+                      const initialTOUData: SampleTOUData = {};
+                      sampleRows.forEach(row => {
+                        initialTOUData[row.Sample] = {
+                          hour0: 0,
+                          hour10: 0,
+                          hour20: 0,
+                          hour24: 0,
+                        };
+                      });
+                      setTouDataBySample(initialTOUData);
+                    }}
+                    className="bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    Manually Add Samples
                   </Button>
                   </div>
               </div>
@@ -1251,6 +1296,7 @@ export default function DashboardPage() {
                         <li>• Required time points: 0, 10, 20, and 24 hours</li>
                         <li>• Samples with matching names will show ✓ Matched status</li>
                         <li>• Unmatched samples can still be processed</li>
+                        <li>• Manual samples from steps 1 & 2 will be automatically matched</li>
                     </ul>
                   </div>
                 </div>
@@ -1341,7 +1387,7 @@ export default function DashboardPage() {
                               <div>Dilution: {matchedSample.dilution}</div>
                               <div>Coeff: {matchedSample.dilutionCoefficient}</div>
                               <div>Fill Weight: {matchedSample.fillWeight} g</div>
-                              <div>Required Dilution Spec: {matchedSample.requiredDilutionSpec}</div>
+                              <div>Required Dilution Specification: {matchedSample.requiredDilutionSpec}</div>
                             </div>
                           </div>
                         )}
@@ -1446,7 +1492,7 @@ export default function DashboardPage() {
                     {matchedSample && (
                       <div className="mt-3 pt-3 border-t border-gray-200 text-xs text-gray-600">
                         <div>Test Type: {matchedSample.testType} | Dilution: {matchedSample.dilution}</div>
-                        <div>Fill Weight: {matchedSample.fillWeight} g | Required Spec: {matchedSample.requiredDilutionSpec}</div>
+                        <div>Fill Weight: {matchedSample.fillWeight} g | Required Specification: {matchedSample.requiredDilutionSpec}</div>
                         <div>Product: {row.Product} | Test: {row.Test}</div>
                       </div>
                     )}
@@ -1465,7 +1511,7 @@ export default function DashboardPage() {
                 {isCalculating ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Calculating with Excel Workbook...
+                    Calculating...
                   </>
                 ) : (
                   'Calculate CFU/G Results for All Samples'
@@ -1536,7 +1582,7 @@ export default function DashboardPage() {
                             {matchedSample && (
                               <>
                               <div>Type: {matchedSample.testType} | Dilution: {matchedSample.dilution}</div>
-                                <div>Fill Weight: {matchedSample.fillWeight} g | Required Spec: {matchedSample.requiredDilutionSpec}</div>
+                                <div>Fill Weight: {matchedSample.fillWeight} g | Required Specification: {matchedSample.requiredDilutionSpec}</div>
                               </>
                             )}
                           </div>
@@ -1582,9 +1628,9 @@ export default function DashboardPage() {
                             <div className="grid grid-cols-3 gap-3">
                               <div className="bg-blue-50 p-3 rounded-lg text-center">
                                 <div className="text-lg font-bold text-blue-600 mb-1">
-                                  {calculatedResult.result?.cfuPerMl || 0}
+                                  {(calculatedResult.result?.cfuPerMl || 0).toFixed(2)}
                                 </div>
-                                <div className="text-xs font-medium text-blue-800">CFU/ml</div>
+                                <div className="text-xs font-medium text-blue-800">Avg Assay CFU/ml</div>
                               </div>
                               
                               <div className="bg-green-50 p-3 rounded-lg text-center">
