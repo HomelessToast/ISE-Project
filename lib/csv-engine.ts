@@ -89,12 +89,12 @@ function findDeps(formula: string): Set<string> {
   // ranges
   const rangeRe = /\$?[A-Z]{1,3}\$?\d+:\$?[A-Z]{1,3}\$?\d+/g;
   const refRe = /\$?[A-Z]{1,3}\$?\d+/g;
-  for (const m of f.matchAll(rangeRe)) {
+  for (const m of Array.from(f.matchAll(rangeRe))) {
     const cells = expandRange(m[0]);
     for (const c of cells) deps.add(`Sheet1!${c}`);
   }
   // single refs
-  for (const m of f.replace(rangeRe, '').matchAll(refRe)) {
+  for (const m of Array.from(f.replace(rangeRe, '').matchAll(refRe))) {
     const ref = m[0].replace(/\$/g, '');
     deps.add(`Sheet1!${ref}`);
   }
