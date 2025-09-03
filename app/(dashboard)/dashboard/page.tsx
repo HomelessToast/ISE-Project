@@ -154,7 +154,7 @@ export default function DashboardPage() {
         testType: templateTestType,
         dilution: templateDilution,
         dilutionCoefficient: templateDilutionCoefficient,
-        fillWeight: parseFloat(templateFillWeight) || 1.0,
+        fillWeight: templateFillWeight || '1.0',
         requiredDilutionSpec: templateRequiredDilutionSpec,
         status: 'pending',
       });
