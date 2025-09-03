@@ -3,6 +3,8 @@ import * as XLSX from 'xlsx';
 import path from 'path';
 import fs from 'fs';
 
+export const runtime = 'nodejs';
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
@@ -36,7 +38,7 @@ export async function GET(request: NextRequest) {
     
     // Find F-cells that might be referenced (F18, F24, F30, etc.)
     const fCellPattern = /F\d+/g;
-    const fCells = [...new Set(targetFormula.match(fCellPattern) || [])];
+    const fCells = Array.from(new Set(targetFormula.match(fCellPattern) || []));
     
     // Get formulas for F-cells
     const fCellFormulas: Record<string, string> = {};

@@ -12,6 +12,7 @@ const nextConfig = {
       '/app/api/ise/debug-cells/route': ['./assets/**'],
       '/app/api/ise/debug-constants/route': ['./assets/**'],
       '/app/api/ise/debug-formula/route': ['./assets/**'],
+      '/app/api/ise/trace/route': ['./assets/**'],
     },
   },
 }
