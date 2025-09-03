@@ -11,6 +11,7 @@ const nextConfig = {
       '/app/api/ise/batch-calculate/route': ['./assets/**'],
       '/app/api/ise/debug-cells/route': ['./assets/**'],
       '/app/api/ise/debug-constants/route': ['./assets/**'],
+      '/app/api/ise/debug-formula/route': ['./assets/**'],
     },
   },
 }
