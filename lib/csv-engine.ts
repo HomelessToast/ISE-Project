@@ -165,9 +165,9 @@ export class CsvEngine {
     }
     // Kahn's algorithm
     const indeg: Record<string, number> = {};
-    for (const id of ids) indeg[id] = 0;
+    for (const id of Array.from(ids)) indeg[id] = 0;
     for (const [id, dset] of Object.entries(depsMap)) {
-      for (const d of dset) if (indeg[d] !== undefined) indeg[id]++;
+      for (const d of Array.from(dset)) if (indeg[d] !== undefined) indeg[id]++;
     }
     const q: string[] = [];
     for (const [id, deg] of Object.entries(indeg)) if (deg === 0) q.push(id);
