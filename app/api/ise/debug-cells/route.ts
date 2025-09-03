@@ -3,6 +3,8 @@ import ExcelJS from 'exceljs';
 import path from 'path';
 import fs from 'fs';
 
+export const runtime = 'nodejs';
+
 export async function POST(request: any) {
   try {
     const body = await request.json();
@@ -21,6 +23,13 @@ export async function POST(request: any) {
     const workbook = new ExcelJS.Workbook();
     await workbook.xlsx.readFile(templatePath);
     const worksheet = workbook.getWorksheet(1);
+    if (!worksheet) {
+      return NextResponse.json({
+        ok: false,
+        error: 'WORKSHEET_NOT_FOUND',
+        details: 'Worksheet index 1 not found in workbook'
+      }, { status: 500 });
+    }
 
     if (action === 'read') {
       // Read current cell values

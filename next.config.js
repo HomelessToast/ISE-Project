@@ -9,6 +9,7 @@ const nextConfig = {
       '/app/api/ise/formulas-csv/route': ['./assets/**'],
       '/app/api/ise/compute/route': ['./assets/**'],
       '/app/api/ise/batch-calculate/route': ['./assets/**'],
+      '/app/api/ise/debug-cells/route': ['./assets/**'],
     },
   },
 }
