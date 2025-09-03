@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
     // Get formulas for F-cells
     const fCellFormulas: Record<string, string> = {};
     for (const fCell of fCells) {
-      const fCellData = worksheet[fCell];
+      const fCellData = worksheet[fCell as keyof typeof worksheet];
       if (fCellData && fCellData.t === 'f') {
         fCellFormulas[fCell] = fCellData.f;
       }
