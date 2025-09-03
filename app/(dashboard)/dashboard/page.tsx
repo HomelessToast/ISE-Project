@@ -814,7 +814,7 @@ export default function DashboardPage() {
                     required
                   />
                   <div className="text-xs text-gray-500">
-                    Weight of the sample in grams (must be > 0)
+                    Weight of the sample in grams (must be &gt; 0)
                   </div>
                 </div>
                 
