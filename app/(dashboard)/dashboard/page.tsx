@@ -378,15 +378,15 @@ export default function DashboardPage() {
           startY: 85,
           styles: {
             fontSize: 8,
-            cellPadding: 2,
-            headStyles: {
-              fillColor: [59, 130, 246], // Blue-600
-              textColor: 255,
-              fontStyle: 'bold'
-            },
-            alternateRowStyles: {
-              fillColor: [249, 250, 251] // Gray-50
-            }
+            cellPadding: 2
+          },
+          headStyles: {
+            fillColor: [59, 130, 246], // Blue-600
+            textColor: 255,
+            fontStyle: 'bold'
+          },
+          alternateRowStyles: {
+            fillColor: [249, 250, 251] // Gray-50
           },
           columnStyles: {
             0: { cellWidth: 22 }, // Sample name
