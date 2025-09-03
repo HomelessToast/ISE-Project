@@ -398,7 +398,7 @@ export default function ISEPage() {
                   </div>
                       {result.result?.raw !== null && (
                         <div className="text-sm text-green-700 mt-1">
-                          Raw value: {result.result.raw}
+                          Raw value: {result.result?.raw}
                       </div>
                     )}
                   </div>
