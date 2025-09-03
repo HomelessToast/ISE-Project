@@ -55,12 +55,12 @@ export async function GET(request: NextRequest) {
     
     // Add refs from target cell
     const targetRefs = targetFormula.match(cellRefPattern) || [];
-    targetRefs.forEach(ref => allRefs.add(ref));
-    
+    targetRefs.forEach((ref: string) => allRefs.add(ref));
+
     // Add refs from F-cells
-    Object.values(fCellFormulas).forEach(formula => {
+    Object.values(fCellFormulas).forEach((formula: string) => {
       const refs = formula.match(cellRefPattern) || [];
-      refs.forEach(ref => allRefs.add(ref));
+      refs.forEach((ref: string) => allRefs.add(ref));
     });
     
     // Remove the target cell itself from refs
