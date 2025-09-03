@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { workbookService } from '@/lib/workbook-service';
 
+export const runtime = 'nodejs';
+
 export async function GET() {
   try {
     // Test basic workbook operations

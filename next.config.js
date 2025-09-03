@@ -13,6 +13,13 @@ const nextConfig = {
       '/app/api/ise/debug-constants/route': ['./assets/**'],
       '/app/api/ise/debug-formula/route': ['./assets/**'],
       '/app/api/ise/trace/route': ['./assets/**'],
+      '/app/api/ise/workbook-names/route': ['./assets/**'],
+      '/app/api/ise/formulas/route': ['./assets/**'],
+      '/app/api/ise/test-sheetjs/route': ['./assets/**'],
+      '/app/api/ise/simple-test/route': ['./assets/**'],
+      '/app/api/ise/test-workbook/route': ['./assets/**'],
+      '/app/api/ise/diagnostics/route': ['./assets/**'],
+      '/app/api/ise/batch/route': ['./assets/**'],
     },
   },
 }

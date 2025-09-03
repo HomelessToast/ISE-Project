@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
     for (const fCell of fCells) {
       const fCellData = worksheet[fCell as keyof typeof worksheet];
       if (fCellData && fCellData.t === 'f') {
-        fCellFormulas[fCell] = fCellData.f;
+        fCellFormulas[fCell as string] = fCellData.f;
       }
     }
     
