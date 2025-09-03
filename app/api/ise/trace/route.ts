@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
       targetFormula,
       fCells: fCells.map(cell => ({
         cell,
-        formula: fCellFormulas[cell] || 'Not a formula'
+        formula: fCellFormulas[cell as string] || 'Not a formula'
       })),
       allCellReferences: Array.from(allRefs).sort(),
       analysis: {
