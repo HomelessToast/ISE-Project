@@ -15,7 +15,15 @@ const handler = NextAuth({
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
         const normalizedEmail = String(credentials.email).trim().toLowerCase();
-        const user = await prisma.user.findUnique({ where: { email: normalizedEmail } });
+        const user = await prisma.user.findUnique({
+          where: { email: normalizedEmail },
+          select: {
+            id: true,
+            name: true,
+            email: true,
+            passwordHash: true,
+          },
+        });
         if (!user || !user.passwordHash) return null;
 
         const ok = await compare(credentials.password, user.passwordHash);
