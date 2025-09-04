@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import * as fs from 'fs';
 import * as path from 'path';
-import { diagnoseCsv } from '@/lib/csv-engine';
+import { diagnoseCsv, analyzeMissingDependencies } from '@/lib/csv-engine';
 
 // xlsx-calc exports a function directly
 const XLSX_CALC = require('xlsx-calc');
@@ -11,32 +11,57 @@ export const runtime = 'nodejs';
 type CsvRow = {
   sheet: string;
   cell: string;
-  mapping: string;
+  mapping?: string;
   kind: 'constant' | 'formula';
-  is_user_input_blue: string;
-  fill_color_token: string;
-  formula_raw: string | undefined;
-  value_literal: string | undefined;
+  is_user_input_blue?: string;
+  fill_color_token?: string;
+  formula_raw?: string | undefined;
+  value_literal?: string | undefined;
 };
 
 function parseCsv(content: string): CsvRow[] {
   const lines = content.split(/\r?\n/).filter(l => l.trim().length > 0);
-  const header = lines[0].split(',');
+  const header = lines[0].split(',').map(h => h.trim());
+  const hasSimple = header.length === 2 && header[0] === 'cell' && header[1] === 'mapping';
   const idx = (name: string) => header.indexOf(name);
   const rows: CsvRow[] = [];
   for (let i = 1; i < lines.length; i++) {
     const cols = lines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/).map(c => c.replace(/^\"|\"$/g, ''));
-    if (cols.length < header.length) continue;
-    rows.push({
-      sheet: cols[idx('sheet')],
-      cell: cols[idx('cell')],
-      mapping: cols[idx('mapping')],
-      kind: (cols[idx('kind')] as any) || 'constant',
-      is_user_input_blue: cols[idx('is_user_input_blue')],
-      fill_color_token: cols[idx('fill_color_token')],
-      formula_raw: cols[idx('formula_raw')] || undefined,
-      value_literal: cols[idx('value_literal')] || undefined,
-    });
+    if (hasSimple) {
+      if (cols.length < 2) continue;
+      const cell = cols[0];
+      const mapping = cols[1];
+      const eqPos = mapping.indexOf('=');
+      const rhsRaw = eqPos > -1 ? mapping.substring(eqPos + 1).trim() : mapping.trim();
+      const isNumeric = rhsRaw !== '' && !isNaN(Number(rhsRaw));
+      const looksLikeRef = /\$?[A-Z]{1,3}\$?\d+/.test(rhsRaw);
+      const looksLikeRange = /\$?[A-Z]{1,3}\$?\d+:\$?[A-Z]{1,3}\$?\d+/.test(rhsRaw);
+      const looksLikeFunc = /^[A-Z]{2,}\s*\(/.test(rhsRaw);
+      const hasNumberedOperator = /\d\s*[+*/^]\s*\d/.test(rhsRaw) || /\d\s*-\s*\d/.test(rhsRaw);
+      const hasLowercase = /[a-z]/.test(rhsRaw);
+      const hasBrackets = /[\[\]]/.test(rhsRaw);
+      const isFormula = rhsRaw.startsWith('=') || (!hasLowercase && !hasBrackets && (looksLikeRef || looksLikeRange || looksLikeFunc || hasNumberedOperator));
+      if (isFormula) {
+        const rhs = rhsRaw.startsWith('=') ? rhsRaw : `=${rhsRaw}`;
+        rows.push({ sheet: 'Sheet1', cell, kind: 'formula', formula_raw: rhs });
+      } else if (isNumeric) {
+        rows.push({ sheet: 'Sheet1', cell, kind: 'constant', value_literal: rhsRaw });
+      } else {
+        rows.push({ sheet: 'Sheet1', cell, kind: 'constant', value_literal: rhsRaw });
+      }
+    } else {
+      if (cols.length < header.length) continue;
+      rows.push({
+        sheet: cols[idx('sheet')],
+        cell: cols[idx('cell')],
+        mapping: cols[idx('mapping')],
+        kind: (cols[idx('kind')] as any) || 'constant',
+        is_user_input_blue: cols[idx('is_user_input_blue')],
+        fill_color_token: cols[idx('fill_color_token')],
+        formula_raw: cols[idx('formula_raw')] || undefined,
+        value_literal: cols[idx('value_literal')] || undefined,
+      });
+    }
   }
   return rows;
 }
@@ -68,14 +93,15 @@ function buildWorkbookFromCsv(rows: CsvRow[]) {
 }
 
 export async function GET() {
-  const csvPath = path.resolve(process.cwd(), 'assets', 'biocount_template_cell_formulas.csv');
+  const csvPath = path.resolve(process.cwd(), 'assets', 'New_Formula_Mapping.csv');
   if (!fs.existsSync(csvPath)) {
     return NextResponse.json({ error: 'CSV not found', path: csvPath }, { status: 404 });
   }
   const csv = fs.readFileSync(csvPath, 'utf8');
   const rows = parseCsv(csv);
   const diag = diagnoseCsv();
-  return NextResponse.json({ count: rows.length, rows, diagnosis: diag });
+  const deps = analyzeMissingDependencies();
+  return NextResponse.json({ count: rows.length, rows, diagnosis: diag, dependencies: deps });
 }
 
 export async function POST(request: NextRequest) {
@@ -108,7 +134,7 @@ export async function POST(request: NextRequest) {
     const coeffTest = dilutionCoeff ?? parseDisplay(dilutionDisplay) ?? 0.001;
     const coeffSpec = parseDisplay(requiredDilutionSpec ?? '1:1000') ?? 0.001;
 
-    const csvPath = path.resolve(process.cwd(), 'assets', 'biocount_template_cell_formulas.csv');
+    const csvPath = path.resolve(process.cwd(), 'assets', 'New_Formula_Mapping.csv');
     if (!fs.existsSync(csvPath)) {
       return NextResponse.json({ error: 'CSV not found', path: csvPath }, { status: 404 });
     }

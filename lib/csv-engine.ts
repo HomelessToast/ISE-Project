@@ -8,10 +8,10 @@ export type Context = Record<string, Value>;
 type CsvRow = {
   sheet: string;
   cell: string;
-  mapping: string;
+  mapping?: string;
   kind: 'constant' | 'formula';
-  is_user_input_blue: string;
-  fill_color_token: string;
+  is_user_input_blue?: string;
+  fill_color_token?: string;
   formula_raw?: string;
   value_literal?: string;
 };
@@ -19,22 +19,49 @@ type CsvRow = {
 function parseCsv(content: string): CsvRow[] {
   const lines = content.split(/\r?\n/).filter(l => l.trim().length > 0);
   if (lines.length === 0) return [];
-  const header = lines[0].split(',');
+  const header = lines[0].split(',').map(h => h.trim());
+  const hasSimple = header.length === 2 && header[0] === 'cell' && header[1] === 'mapping';
   const idx = (name: string) => header.indexOf(name);
   const rows: CsvRow[] = [];
+
   for (let i = 1; i < lines.length; i++) {
     const cols = lines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/).map(c => c.replace(/^\"|\"$/g, ''));
-    if (cols.length < header.length) continue;
-    rows.push({
-      sheet: cols[idx('sheet')],
-      cell: cols[idx('cell')],
-      mapping: cols[idx('mapping')],
-      kind: (cols[idx('kind')] as any) || 'constant',
-      is_user_input_blue: cols[idx('is_user_input_blue')],
-      fill_color_token: cols[idx('fill_color_token')],
-      formula_raw: cols[idx('formula_raw')] || undefined,
-      value_literal: cols[idx('value_literal')] || undefined,
-    });
+    if (hasSimple) {
+      if (cols.length < 2) continue;
+      const cell = cols[0];
+      const mapping = cols[1];
+      // mapping looks like "K15=..." where RHS may be formula, number, or text
+      const eqPos = mapping.indexOf('=');
+      const rhsRaw = eqPos > -1 ? mapping.substring(eqPos + 1).trim() : mapping.trim();
+      const isNumeric = rhsRaw !== '' && !isNaN(Number(rhsRaw));
+      const looksLikeRef = /\$?[A-Z]{1,3}\$?\d+/.test(rhsRaw);
+      const looksLikeRange = /\$?[A-Z]{1,3}\$?\d+:\$?[A-Z]{1,3}\$?\d+/.test(rhsRaw);
+      const looksLikeFunc = /^[A-Z]{2,}\s*\(/.test(rhsRaw);
+      const hasNumberedOperator = /\d\s*[+*/^]\s*\d/.test(rhsRaw) || /\d\s*-\s*\d/.test(rhsRaw);
+      const hasLowercase = /[a-z]/.test(rhsRaw);
+      const hasBrackets = /[\[\]]/.test(rhsRaw);
+      const isFormula = rhsRaw.startsWith('=') || (!hasLowercase && !hasBrackets && (looksLikeRef || looksLikeRange || looksLikeFunc || hasNumberedOperator));
+      if (isFormula) {
+        const rhs = rhsRaw.startsWith('=') ? rhsRaw : `=${rhsRaw}`;
+        rows.push({ sheet: 'Sheet1', cell, kind: 'formula', formula_raw: rhs });
+      } else if (isNumeric) {
+        rows.push({ sheet: 'Sheet1', cell, kind: 'constant', value_literal: rhsRaw });
+      } else {
+        rows.push({ sheet: 'Sheet1', cell, kind: 'constant', value_literal: rhsRaw });
+      }
+    } else {
+      if (cols.length < header.length) continue;
+      rows.push({
+        sheet: cols[idx('sheet')],
+        cell: cols[idx('cell')],
+        mapping: cols[idx('mapping')],
+        kind: (cols[idx('kind')] as any) || 'constant',
+        is_user_input_blue: cols[idx('is_user_input_blue')],
+        fill_color_token: cols[idx('fill_color_token')],
+        formula_raw: cols[idx('formula_raw')] || undefined,
+        value_literal: cols[idx('value_literal')] || undefined,
+      });
+    }
   }
   return rows;
 }
@@ -144,7 +171,7 @@ export class CsvEngine {
   private compilers: Record<string, (ctx: Context) => any> = {};
 
   constructor(csvPath?: string) {
-    const p = csvPath ?? path.resolve(process.cwd(), 'assets', 'biocount_template_cell_formulas.csv');
+    const p = csvPath ?? path.resolve(process.cwd(), 'assets', 'New_Formula_Mapping.csv');
     const content = fs.readFileSync(p, 'utf8');
     this.rows = parseCsv(content);
     this.prepare();
@@ -265,7 +292,7 @@ export function diagnoseCsv(): {
   compiledOk: number;
   errors: Array<{ id: string; formula: string; error: string }>;
 } {
-  const p = path.resolve(process.cwd(), 'assets', 'biocount_template_cell_formulas.csv');
+  const p = path.resolve(process.cwd(), 'assets', 'New_Formula_Mapping.csv');
   const content = fs.readFileSync(p, 'utf8');
   const rows = parseCsv(content);
   const errors: Array<{ id: string; formula: string; error: string }> = [];
@@ -284,6 +311,38 @@ export function diagnoseCsv(): {
     }
   }
   return { totalRows: rows.length, formulaRows: formulas, compiledOk: ok, errors };
+}
+
+export function analyzeMissingDependencies(): {
+  defined: string[];
+  referenced: string[];
+  missing: string[];
+} {
+  const p = path.resolve(process.cwd(), 'assets', 'New_Formula_Mapping.csv');
+  const content = fs.readFileSync(p, 'utf8');
+  const rows = parseCsv(content);
+  const defined = new Set<string>();
+  const referenced = new Set<string>();
+
+  for (const r of rows) {
+    const id = `${r.sheet}!${r.cell}`;
+    defined.add(id);
+    if (r.kind === 'formula' && r.formula_raw) {
+      const deps = findDeps(r.formula_raw);
+      for (const d of Array.from(deps)) referenced.add(d);
+    }
+  }
+
+  // Seeded inputs at runtime (avoid flagging as missing)
+  const seeded = [
+    'Sheet1!B18','Sheet1!C18','Sheet1!C35','Sheet1!J11',
+    'Sheet1!D18','Sheet1!D19','Sheet1!D20','Sheet1!D21',
+  ];
+  for (const s of seeded) defined.add(s);
+
+  const missing = Array.from(referenced).filter(id => !defined.has(id));
+  missing.sort();
+  return { defined: Array.from(defined).sort(), referenced: Array.from(referenced).sort(), missing };
 }
 
 
