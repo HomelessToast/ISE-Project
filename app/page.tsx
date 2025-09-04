@@ -9,48 +9,66 @@ export default function HomePage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 py-20">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-2xl mb-8">
-              <span className="text-white text-3xl font-bold">BC</span>
+      <section className="relative bg-gradient-to-b from-slate-50 to-white py-16 sm:py-20">
+        {/* Dotted background overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 1px 1px, rgba(100,116,139,0.25) 1px, transparent 0)',
+            backgroundSize: '20px 20px',
+            maskImage:
+              'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.4) 55%, rgba(0,0,0,0))',
+            WebkitMaskImage:
+              'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.4) 55%, rgba(0,0,0,0))',
+          }}
+        />
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            <div className="text-center">
+              <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight tracking-tight">
+                BioCount.io
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-600 mb-6 sm:mb-8 max-w-xl mx-auto leading-relaxed">
+                Advanced CO₂-based rapid microbiological enumeration using the validated ISE method. Transform your Soleris Fusion TOU data into accurate cfu/g results in seconds, not days.
+              </p>
+              <div className="flex justify-center gap-3 sm:gap-4">
+                <Link href="/dashboard">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 sm:px-10 py-4 text-lg sm:text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
+                    Start Analysis
+                  </Button>
+                </Link>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-              BioCount.ai
-            </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced CO₂-based rapid microbiological enumeration using the validated ISE method. 
-              Transform your Soleris Fusion TOU data into accurate cfu/g results in hours, not days.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/dashboard">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
-                  Start Analysis
-                </Button>
-              </Link>
-              <Link href="/samples/new">
-                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-200">
-                  New Sample
-                </Button>
-              </Link>
+            <div className="relative">
+              <div className="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 overflow-hidden">
+                <img src="/Screenshot 2025-09-04 125655.png" alt="BioCount.io interface preview" className="w-full h-auto" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Gradient divider between hero and next section */}
+      <section className="relative h-12 -mt-4 sm:-mt-6">
+        <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-slate-300/50 via-slate-200/30 to-transparent"></div>
+      </section>
+
+      {/* Removed separate interface preview; integrated into hero */}
+
       {/* Key Benefits */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-16">
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Why Choose BioCount.ai?
+              Why Choose BioCount.io?
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Industry-leading accuracy with breakthrough speed for microbiological enumeration
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-indigo-50">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -106,18 +124,18 @@ export default function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-16">
+      <section className="py-16 sm:py-20 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              How BioCount.ai Works
+              How BioCount.io Works
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Four simple steps from TOU data to accurate cfu/g results
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
                 1
@@ -170,9 +188,9 @@ export default function HomePage() {
       </section>
 
       {/* Technical Specifications */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-16">
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               Technical Specifications
             </h2>
@@ -276,11 +294,6 @@ export default function HomePage() {
             <Link href="/dashboard">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
                 Start Free Analysis
-              </Button>
-            </Link>
-            <Link href="/samples/new">
-              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-200">
-                Create Sample
               </Button>
             </Link>
           </div>

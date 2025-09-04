@@ -7,7 +7,7 @@ import { Footer } from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'BioCount.ai - CO₂-based Rapid Microbiological Methods',
+  title: 'BioCount.io - CO₂-based Rapid Microbiological Methods',
   description: 'Convert Soleris Fusion TOU time-series data into cfu/g using the In-Silico Enumeration (ISE) method',
   keywords: 'ISE, microbiology, TOU, CFU, rapid methods, food safety, BioCount',
 };

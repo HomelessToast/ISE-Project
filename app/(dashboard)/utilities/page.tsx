@@ -229,7 +229,7 @@ export default function UtilitiesPage() {
           <CardContent className="space-y-3">
             <div className="flex justify-between">
               <span className="text-sm text-gray-600">Version:</span>
-              <span className="text-sm font-medium">BioCount.ai v1.0.0</span>
+              <span className="text-sm font-medium">BioCount.io v1.0.0</span>
             </div>
             <div className="flex justify-between">
               <span className="text-sm text-gray-600">Database:</span>

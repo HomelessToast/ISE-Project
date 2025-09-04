@@ -82,7 +82,7 @@ export function Sidebar() {
             <span className="text-white font-bold text-lg">BC</span>
           </div>
           <span className="text-xl font-semibold text-white">
-            BioCount.ai
+            BioCount.io
           </span>
         </Link>
       </div>

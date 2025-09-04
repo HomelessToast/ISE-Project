@@ -328,7 +328,7 @@ export default function DashboardPage() {
         // Header
         doc.setFontSize(24);
         doc.setTextColor(59, 130, 246); // Blue-600
-        doc.text('BioCount.ai ISE Results Report', 105, 20, { align: 'center' });
+        doc.text('BioCount.io ISE Results Report', 105, 20, { align: 'center' });
         
 
         
@@ -407,7 +407,7 @@ export default function DashboardPage() {
         const finalY = (doc as any).lastAutoTable.finalY + 10;
         doc.setFontSize(8);
         doc.setTextColor(156, 163, 175); // Gray-400
-        doc.text('BioCount.ai - Advanced Microbiological Enumeration', 105, finalY, { align: 'center' });
+        doc.text('BioCount.io - Advanced Microbiological Enumeration', 105, finalY, { align: 'center' });
         
         // Save the PDF
         doc.save(`biocount-ise-results-${now.toISOString().split('T')[0]}.pdf`);
@@ -658,7 +658,7 @@ export default function DashboardPage() {
     <div className="max-w-6xl mx-auto space-y-8">
       {/* Page Header */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900">BioCount.ai Dashboard</h1>
+        <h1 className="text-3xl font-bold text-gray-900">BioCount.io Dashboard</h1>
         <p className="text-gray-600 mt-2">
           CO₂-based Rapid Microbiological Enumeration using the ISE Method
         </p>
