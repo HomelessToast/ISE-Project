@@ -5,7 +5,7 @@ export function Footer() {
         <div className="text-center text-sm text-gray-500 dark:text-gray-400">
           <p>© 2024 BioCount.io. Built with Next.js and TypeScript.</p>
           <p className="mt-2">
-            In-Silico Enumeration (ISE) method for CO₂-based Rapid Microbiological Methods
+            In-Silico Enumeration (ISE) method for Rapid Microbiological Methods
           </p>
         </div>
       </div>

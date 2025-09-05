@@ -81,7 +81,7 @@ export default function HomePage() {
               <CardContent className="text-center">
                 <CardDescription className="text-slate-600 text-base leading-relaxed">
                   Results in 24 hours for bacteria, 48 hours for yeast/mold. 
-                  Eliminate the 5-7 day wait for traditional plating methods.
+                  Eliminate the wait for traditional plating methods.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -97,8 +97,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-slate-600 text-base leading-relaxed">
-                  ±0.5 log agreement with plate counts. R² correlation of 0.91-0.98 
-                  validates our method against industry standards.
+                  Meets or exceeds industry plating standards using cutting edge formulation.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -248,7 +247,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">Growth Phase Analysis</h3>
-                  <p className="text-slate-600">Automatic detection of lag, exponential, and stationary phases with dynamic TOU/CFU ratios</p>
+                  <p className="text-slate-600">Real time enumeration with dynamic TOU/CFU ratios.</p>
                 </div>
               </div>
               

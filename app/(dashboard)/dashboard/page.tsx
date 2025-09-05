@@ -660,7 +660,7 @@ export default function DashboardPage() {
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-900">BioCount.io Dashboard</h1>
         <p className="text-gray-600 mt-2">
-          CO₂-based Rapid Microbiological Enumeration using the ISE Method
+          Rapid Microbiological Enumeration using the ISE Method
         </p>
         <div className="mt-4">
           <Badge variant="outline" className="text-sm">
@@ -811,7 +811,6 @@ export default function DashboardPage() {
                     placeholder="1.00"
                     value={templateFillWeight}
                     onChange={(e) => setTemplateFillWeight(e.target.value)}
-                    required
                   />
                   <div className="text-xs text-gray-500">
                     Weight of the sample in grams (must be &gt; 0)
@@ -1628,21 +1627,21 @@ export default function DashboardPage() {
                             <div className="grid grid-cols-3 gap-3">
                               <div className="bg-blue-50 p-3 rounded-lg text-center">
                                 <div className="text-lg font-bold text-blue-600 mb-1">
-                                  {(calculatedResult.result?.cfuPerMl || 0).toFixed(2)}
+                                  {Math.round(calculatedResult.result?.cfuPerMl || 0).toLocaleString()}
                                 </div>
-                                <div className="text-xs font-medium text-blue-800">Avg Assay CFU/ml</div>
+                                <div className="text-xs font-medium text-blue-800">Avg Assay cfu/mL</div>
                               </div>
                               
                               <div className="bg-green-50 p-3 rounded-lg text-center">
                                 <div className="text-lg font-bold text-green-600 mb-1">
-                                  {calculatedResult.result?.formatted || calculatedResult.result?.cfuPerG || 'N/A'}
+                                  {Math.round(calculatedResult.result?.cfuPerG || 0).toLocaleString()}
                                 </div>
-                                <div className="text-xs font-medium text-blue-800">CFU/G</div>
+                                <div className="text-xs font-medium text-blue-800">cfu/g</div>
                               </div>
                               
                               <div className="bg-purple-50 p-3 rounded-lg text-center">
                                 <div className="text-lg font-bold text-purple-600 mb-1">
-                                  {calculatedResult.result?.cfuPerG > 0 ? Math.log10(calculatedResult.result.cfuPerG).toFixed(3) : '0.000'}
+                                  {calculatedResult.result?.cfuPerG > 0 ? Math.log10(calculatedResult.result.cfuPerG).toFixed(2) : '0.00'}
                                 </div>
                                 <div className="text-xs font-medium text-purple-800">Log₁₀</div>
                               </div>
