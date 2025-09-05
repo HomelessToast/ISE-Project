@@ -30,7 +30,7 @@ export default function HomePage() {
                 BioCount.io
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 mb-6 sm:mb-8 max-w-xl mx-auto leading-relaxed">
-                Advanced CO₂-based rapid microbiological enumeration using the validated ISE method. Transform your Soleris Fusion TOU data into accurate cfu/g results in seconds, not days.
+                Reduce time to results by 24-48 hours using the new industry standard: Microbiological in silico enumeration. Transform your test data into accurate cfu/g and cfu/ml results in seconds, not days.
               </p>
               <div className="flex justify-center gap-3 sm:gap-4">
                 <Link href="/dashboard">
@@ -76,7 +76,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <CardTitle className="text-xl text-slate-900">Lightning Fast</CardTitle>
+                <CardTitle className="text-xl text-slate-900">Reduce time to results by 24-48 hours</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-slate-600 text-base leading-relaxed">
@@ -97,7 +97,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-slate-600 text-base leading-relaxed">
-                  ±0.5 log agreement with plate counts. R² correlation of 0.9146 
+                  ±0.5 log agreement with plate counts. R² correlation of 0.91-0.98 
                   validates our method against industry standards.
                 </CardDescription>
               </CardContent>
@@ -110,12 +110,12 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <CardTitle className="text-xl text-slate-900">Smart Analysis</CardTitle>
+                <CardTitle className="text-xl text-slate-900">USP 1223 Compliant</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-slate-600 text-base leading-relaxed">
-                  AI-powered growth phase detection. Automatic identification of lag, 
-                  exponential, and stationary phases from TOU curves.
+                  Validated in alignment with USP 1223 for alternative microbiological methods, 
+                  demonstrating accuracy, precision, robustness, and equivalency to compendial methods.
                 </CardDescription>
               </CardContent>
             </Card>
