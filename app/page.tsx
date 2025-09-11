@@ -15,7 +15,7 @@ export default function HomePage() {
           className="absolute inset-0 pointer-events-none z-0"
           style={{
             backgroundImage:
-              'radial-gradient(circle at 1px 1px, rgba(100,116,139,0.25) 1px, transparent 0)',
+              'radial-gradient(circle at 1px 1px, rgba(100,116,139,0.35) 1px, transparent 0)',
             backgroundSize: '20px 20px',
             maskImage:
               'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.4) 55%, rgba(0,0,0,0))',
