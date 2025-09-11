@@ -25,6 +25,7 @@
   "dependencies": {
     "@formulajs/formulajs": "^4.5.3",
     "@hookform/resolvers": "^3.3.2",
+    "@neondatabase/serverless": "^1.0.1",
     "@prisma/client": "^5.7.1",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-select": "^2.2.5",

@@ -20,3 +20,8 @@ prisma/*.db-journal
 
 # Tooling/hosting
 .vercel/
+.env
+.env.*
+prisma/dev.db
+node_modules/
+.next/
