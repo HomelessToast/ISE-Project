@@ -9,9 +9,7 @@ export function Header() {
         <div className="relative flex justify-between items-center h-14 sm:h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-xs sm:text-sm">BC</span>
-              </div>
+              <img src="/Logo%20GPT.png" alt="BioCount logo" className="h-10 sm:h-12 w-auto" />
               <span className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
                 BioCount.io
               </span>
