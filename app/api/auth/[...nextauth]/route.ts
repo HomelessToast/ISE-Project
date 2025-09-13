@@ -13,7 +13,9 @@ const handler = NextAuth({
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null;
+        if (!credentials?.email || !credentials?.password) {
+          throw new Error('Please provide email and password');
+        }
         const normalizedEmail = String(credentials.email).trim().toLowerCase();
         const user = await prisma.user.findUnique({
           where: { email: normalizedEmail },
@@ -24,10 +26,15 @@ const handler = NextAuth({
             passwordHash: true,
           },
         });
-        if (!user || !user.passwordHash) return null;
+        if (!user || !user.passwordHash) {
+          // Avoid leaking whether the email exists
+          throw new Error('Incorrect email or password');
+        }
 
         const ok = await compare(credentials.password, user.passwordHash);
-        if (!ok) return null;
+        if (!ok) {
+          throw new Error('Incorrect email or password');
+        }
 
         return { id: user.id, name: user.name ?? user.email, email: user.email } as any;
       },
@@ -35,6 +42,7 @@ const handler = NextAuth({
   ],
   pages: {
     signIn: '/login',
+    error: '/login',
   },
 });
 

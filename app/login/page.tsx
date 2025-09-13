@@ -1,17 +1,36 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function LoginPage() {
   const router = useRouter();
+  const search = useSearchParams();
   const [mode, setMode] = useState<'login' | 'signup'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+
+  // Map NextAuth error codes or messages to friendly text
+  const errorFromQuery = useMemo(() => {
+    const q = search?.get('error');
+    if (!q) return null;
+    // NextAuth may pass string messages from authorize() or codes like CredentialsSignin
+    if (q === 'CredentialsSignin') return 'Incorrect email or password';
+    try {
+      // Some adapters encode the message; keep it simple
+      return decodeURIComponent(q);
+    } catch {
+      return q;
+    }
+  }, [search]);
+
+  useEffect(() => {
+    if (errorFromQuery) setError(errorFromQuery);
+  }, [errorFromQuery]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -35,7 +54,11 @@ export default function LoginPage() {
         email,
         password,
       });
-      if (result?.error) throw new Error(result.error);
+      if (result?.error) {
+        // Normalize common cases
+        if (result.error === 'CredentialsSignin') throw new Error('Incorrect email or password');
+        throw new Error(result.error);
+      }
       router.push('/dashboard');
     } catch (err: any) {
       setError(err.message || 'Something went wrong');
